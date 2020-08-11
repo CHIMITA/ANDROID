@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        tools:context=".MainActivity">'
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme"
+            android:orientation="horizontal">
+            
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#ffffff"
+                android:background="@drawable/menu"
+                android:id="@+id/opendrawer"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/test"
+                    android:background="#00ffffff"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spll"
+                    android:background="#0036db89"/>
+        </LinearLayout><!--상단-->
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager">
+    </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+    <include
+        layout="@layout/activity_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>
