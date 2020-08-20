@@ -35,7 +35,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/spll"
                     android:background="#0036db89"/>
-        </LinearLayout><!--상단-->
+        </LinearLayout>
+        <!--상단-->
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
