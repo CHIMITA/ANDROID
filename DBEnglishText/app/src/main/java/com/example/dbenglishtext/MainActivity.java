@@ -7,9 +7,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
@@ -84,7 +86,50 @@ public class MainActivity extends AppCompatActivity {
         {
             pop.dismiss();
         }
+        View popView = getLayoutInflater().inflate(R.layout.popup_finish, null);
+        pop = new PopupWindow(popView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        //popupView 에서 (LinearLayout 을 사용) 레이아웃이 둘러싸고 있는 컨텐츠의 크기 만큼 팝업 크기를 지정
+        pop.showAtLocation(popView, Gravity.CENTER, 0, 0);
+
+        Button cancel = (Button)popView.findViewById(R.id.popupCancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pop.dismiss();
+            }
+        });
+
+        final Button fini = (Button)popView.findViewById(R.id.popupFinish);
+        fini.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
+
+    private void getWordText(String temp)
+    {
+        String t = "";
+        for(int i=0; i<temp.length(); i++)
+        {
+            if(!String.valueOf('|').equals(String.valueOf(temp.charAt(i)))
+                    && !String.valueOf('/').equals(String.valueOf(temp.charAt(i))))
+                t +=temp.charAt(i);
+
+            else if(String.valueOf('|').equals(String.valueOf(temp.charAt(i))))
+            {
+                word.add(t);
+                t="";
+            }
+            else if(String.valueOf('/').equals(String.valueOf(temp.charAt(i))))
+            {
+                mean.add(t);
+                t="";
+            }
+        }
+    }
+
 
     void viewPagerInit() {
     }

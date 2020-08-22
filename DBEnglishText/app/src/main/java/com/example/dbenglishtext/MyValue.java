@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class MyValue {
     static public ArrayList<MyDataList> getEng(Context ctx) {
 
-        SharedPreferences prefs = ctx.getSharedPreferences("eng", Context.MODE_PRIVATE);
+        SharedPreferences prefs = ctx.getSharedPreferences("eng", Context.MODE_PRIVATE); //적은 데이터들을 안드로이드 내에 저장하는 함수
         String result = prefs.getString("data", null);
         ArrayList<MyDataList> temp = stringToMyDataList(result);
         Log.d("qwe", result + "!!!!");

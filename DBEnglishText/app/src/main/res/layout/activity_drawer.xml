@@ -24,13 +24,14 @@
             android:textStyle="bold"
             android:id="@+id/drawer_top"
             android:text="단어를 외우자" />
+
         <Button
             android:id="@+id/closedrawer"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_alignRight="@id/drawer_top"
-            android:backgroundTint="#ffffff"
-            android:background="@android:drawable/ic_menu_close_clear_cancel"/>
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:backgroundTint="#ffffff" />
     </RelativeLayout>
 
     <LinearLayout
