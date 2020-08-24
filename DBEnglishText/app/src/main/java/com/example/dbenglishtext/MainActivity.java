@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> mean;
 
     //popUp
-    private PopupWindow mPopupWindow ;
+    private PopupWindow mPopupWindow;
     private EditText menuEdit;
     private EditText wordEdit;
     private EditText meanEdit;
@@ -50,18 +51,18 @@ public class MainActivity extends AppCompatActivity {
     View popupView;
 
     //붙여넣기 popup
-    private PopupWindow pastePopup ;
+    private PopupWindow pastePopup;
     private View pasteView;
     private Button pasteAdd;
     private Button pasteCancel;
     private EditText pasteEdit;
     ClipboardManager clipBoard;
-    ClipData.Item item ;
+    ClipData.Item item;
 
     //종료 popup
     private PopupWindow pop;
     //data
-    String data ="";
+    String data = "";
 
     public MainActivity() {
     }
@@ -82,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(pop!=null && pop.isShowing())
-        {
+        if (pop != null && pop.isShowing()) {
             pop.dismiss();
         }
         View popView = getLayoutInflater().inflate(R.layout.popup_finish, null);
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         //popupView 에서 (LinearLayout 을 사용) 레이아웃이 둘러싸고 있는 컨텐츠의 크기 만큼 팝업 크기를 지정
         pop.showAtLocation(popView, Gravity.CENTER, 0, 0);
 
-        Button cancel = (Button)popView.findViewById(R.id.popupCancel);
+        Button cancel = (Button) popView.findViewById(R.id.popupCancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Button fini = (Button)popView.findViewById(R.id.popupFinish);
+        final Button fini = (Button) popView.findViewById(R.id.popupFinish);
         fini.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,34 +108,57 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void getWordText(String temp)
-    {
+    private void getWordText(String temp) {
         String t = "";
-        for(int i=0; i<temp.length(); i++)
-        {
-            if(!String.valueOf('|').equals(String.valueOf(temp.charAt(i)))
+        for (int i = 0; i < temp.length(); i++) {
+            if (!String.valueOf('|').equals(String.valueOf(temp.charAt(i)))
                     && !String.valueOf('/').equals(String.valueOf(temp.charAt(i))))
-                t +=temp.charAt(i);
+                t += temp.charAt(i);
 
-            else if(String.valueOf('|').equals(String.valueOf(temp.charAt(i))))
-            {
+            else if (String.valueOf('|').equals(String.valueOf(temp.charAt(i)))) {
                 word.add(t);
-                t="";
-            }
-            else if(String.valueOf('/').equals(String.valueOf(temp.charAt(i))))
-            {
+                t = "";
+            } else if (String.valueOf('/').equals(String.valueOf(temp.charAt(i)))) {
                 mean.add(t);
-                t="";
+                t = "";
             }
         }
     }
 
 
     void viewPagerInit() {
+        word = new ArrayList<>();
+        mean = new ArrayList<>();
+        getWordText(data);
+        if (word.size() != mean.size()) {
+            word.clear();
+            mean.clear();
+        }
+        pager = (ViewPager) findViewById(R.id.viewpager);
+        mPagerAdapter = new PagerItem(getApplicationContext(), word, mean);
+        pager.setAdapter(mPagerAdapter);
     }
 
     void drawerInit() {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerView = (View) findViewById(R.id.drawer);
+        listView = (ListView) findViewById(R.id.listView);
+        adapter = new CustomAdapter(getApplicationContext(), engData, listView);
+        listView.setAdapter(adapter);
+        saveEngData = (Button) findViewById(R.id.engSave);
+        addMenu = (Button) findViewById(R.id.addMenu);
+
+        addMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupInit();
+            }
+
+
+        });
+
     }
 
-
+    private void popupInit() {
+    }
 }
