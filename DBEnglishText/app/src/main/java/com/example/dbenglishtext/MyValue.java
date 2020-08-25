@@ -7,6 +7,10 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class MyValue {
+    public static String saveTempContent;
+    public static String saveTempMenu;
+    public static String value;
+
     static public ArrayList<MyDataList> getEng(Context ctx) {
 
         SharedPreferences prefs = ctx.getSharedPreferences("eng", Context.MODE_PRIVATE); //적은 데이터들을 안드로이드 내에 저장하는 함수
@@ -38,6 +42,9 @@ public class MyValue {
             }
         }
         return result;
+    }
+
+    public static void saveEng(Context applicationContext, ArrayList<MyDataList> engData) {
     }
 }
 

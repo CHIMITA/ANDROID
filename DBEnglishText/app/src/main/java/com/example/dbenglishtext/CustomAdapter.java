@@ -73,4 +73,10 @@ public class CustomAdapter implements ListAdapter {
     public boolean isEmpty() {
         return false;
     }
+
+    public void add(MyDataList temp) {
+    }
+
+    public void notifyDataSetChanged() {
+    }
 }
