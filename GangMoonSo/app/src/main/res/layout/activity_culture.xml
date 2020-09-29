@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/cutout"
+    tools:ignore=".Culture"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        android:background="#ffffff"
+        app:menu="@menu/menu"
+        android:layout_gravity="start"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <include layout="@layout/toolbar_"/>
+
+            <ImageView
+                android:layout_width="195dp"
+                android:layout_height="250dp"
+                android:id="@+id/art_center_image"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/culture_one" />
+
+            <ImageView
+                android:layout_width="195dp"
+                android:layout_height="125dp"
+                android:id="@+id/art_center_image_two"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/culture_two"/>
+
+            <ImageView
+                android:layout_width="195dp"
+                android:layout_height="125dp"
+                android:id="@+id/art_center_image_three"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/culture_three"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/art_center_title"
+                android:text="@string/traditional_place"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="60dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="360dp"
+                android:background="#808080" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text"
+                android:text="@string/text"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:layout_marginTop="370dp"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/art_center_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="400dp"
+                android:text="@string/traditional_sub"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/art_center_contents_two"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="480dp"
+                android:text="@string/traditional_contents"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="590dp"
+                android:background="#808080" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/time"
+                android:layout_marginTop="600dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/traditional_time"
+                android:textSize="17dp"
+                android:textColor="#000000"
+                android:layout_marginTop="600dp"
+                android:layout_marginLeft="50dp"/>
+
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/won"
+                android:layout_marginTop="650dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/traditional_adult"
+                android:textSize="17dp"
+                android:textColor="#000000"
+                android:layout_marginTop="650dp"
+                android:layout_marginLeft="50dp"/>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/home"
+                android:layout_marginTop="710dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/traditional_address"
+                android:textSize="17dp"
+                android:textColor="#000000"
+                android:layout_marginTop="710dp"
+                android:layout_marginLeft="50dp"/>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/closed"
+                android:layout_marginTop="750dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/traditional_holiday"
+                android:textSize="17dp"
+                android:textColor="#000000"
+                android:layout_marginTop="750dp"
+                android:layout_marginLeft="50dp"/>
+
+
+        </FrameLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

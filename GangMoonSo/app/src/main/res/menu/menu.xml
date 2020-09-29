@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:title="홈"
+            android:checked="true"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:icon="@drawable/home"/>
+        <item
+            android:id="@+id/nav_culture"
+            android:title="전통문화"
+            android:checked="true"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:icon="@drawable/tra"/>
+        <item
+            android:id="@+id/nav_art"
+            android:checked="true"
+            android:title="문화예술"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:icon="@drawable/munhay"/>
+        <item
+            android:id="@+id/nav_festival"
+            android:checked="true"
+            android:title="문화축제"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:icon="@drawable/munhac"/>
+        <item
+            android:id="@+id/nav_book"
+            android:checked="true"
+            android:title="도서시설"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:icon="@drawable/read"/>
+    </group>
+
+</menu>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/Mscreen"
+    android:background="@color/cutout"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".Main2Activity">
+
+    <!--  top_layout  -->
+    <!--  강문소_Text_layout  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/top_lay" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/gangmunso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:fontFamily="@font/dmdo"
+            android:text="강문소"
+            android:textColor="#00B992"
+            android:textSize="250px" />
+    </LinearLayout>
+
+    <!-- item_layout -->
+    <GridLayout
+        android:useDefaultMargins="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:useDefaultMargins="true"
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/ibtn_culture"
+                android:background="#ffffff"
+                android:src="@drawable/tra"
+                android:layout_width="200dp"
+                android:layout_height="205dp"
+                />
+            <TextView
+                android:fontFamily="@font/dmdo"
+                android:layout_gravity="center"
+                android:textColor="#00B992"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전통문화"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:useDefaultMargins="true"
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/ibtn_festival"
+                android:background="#ffffff"
+                android:src="@drawable/munhac"
+                android:layout_width="200dp"
+                android:layout_height="205dp"
+                />
+            <TextView
+                android:fontFamily="@font/dmdo"
+                android:layout_gravity="center"
+                android:textColor="#00B992"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문화축제"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:useDefaultMargins="true"
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:background="#ffffff"
+                android:id="@+id/ibtn_art"
+                android:src="@drawable/munhay"
+                android:layout_width="200dp"
+                android:layout_height="205dp"
+                />
+            <TextView
+                android:fontFamily="@font/dmdo"
+                android:layout_gravity="center"
+                android:textColor="#00B992"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문화예술"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:gravity="center"
+            android:useDefaultMargins="true"
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:background="#ffffff"
+                android:src="@drawable/read"
+                android:id="@+id/ibtn_books"
+                android:layout_width="200dp"
+                android:layout_height="205dp"
+                />
+            <TextView
+                android:fontFamily="@font/dmdo"
+                android:layout_gravity="center"
+                android:textColor="#00B992"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도서시설"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+
+    </GridLayout>
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+</LinearLayout>

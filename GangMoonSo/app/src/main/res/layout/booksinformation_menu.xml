@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/cutout"
+    tools:ignore="MenuActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        android:background="#ffffff"
+        android:textColor="#000000"
+        app:menu="@menu/menu"
+        android:layout_gravity="start"/>
+
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/library1_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/library1" />
+
+                <Button
+                    android:id="@+id/library1_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="55dp"
+                    android:background="#00ff0000"
+                    android:textColor="#000000"
+                    android:gravity="top"
+                    android:text="@string/library1"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="90dp"
+                    android:text="@string/library1_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="160dp"
+                    android:background="#808080" />
+
+
+                <ImageButton
+                    android:id="@+id/library2_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="180dp"
+                    android:background="@drawable/library2" />
+
+                <Button
+                    android:id="@+id/library2_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="180dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library2"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="215dp"
+                    android:text="@string/library2_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="300dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library3_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="320dp"
+                    android:background="@drawable/library3" />
+
+                <Button
+                    android:id="@+id/library3_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="320dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library3"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="355dp"
+                    android:text="@string/library3_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="440dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library4_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="460dp"
+                    android:background="@drawable/library4" />
+
+                <Button
+                    android:id="@+id/library4_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="460dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library4"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="495dp"
+                    android:text="@string/library4_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="580dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library5_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="600dp"
+                    android:background="@drawable/library5" />
+
+                <Button
+                    android:id="@+id/library5_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="600dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library5"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="635dp"
+                    android:text="@string/library5_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="720dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library6_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="740dp"
+                    android:background="@drawable/library6" />
+
+                <Button
+                    android:id="@+id/library6_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="740dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library6"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="775dp"
+                    android:text="@string/library6_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="860dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library7_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="880dp"
+                    android:background="@drawable/library7" />
+
+                <Button
+                    android:id="@+id/library7_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="880dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library7"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="915dp"
+                    android:text="@string/library7_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1000dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library8_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1020dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/library8" />
+
+                <Button
+                    android:id="@+id/library8_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1020dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library8"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1055dp"
+                    android:text="@string/library8_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1140dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library9_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1160dp"
+                    android:background="@drawable/library9" />
+
+                <Button
+                    android:id="@+id/library9_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1160dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library9"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1195dp"
+                    android:text="@string/library9_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1280dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library10_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1300dp"
+                    android:background="@drawable/library10" />
+
+                <Button
+                    android:id="@+id/library10_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1300dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library10"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1335dp"
+                    android:text="@string/library10_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1420dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library11_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1440dp"
+                    android:background="@drawable/library11" />
+
+                <Button
+                    android:id="@+id/library11_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1440dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library11"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1475dp"
+                    android:text="@string/library11_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1560dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library12_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1580dp"
+                    android:background="@drawable/library12" />
+
+                <Button
+                    android:id="@+id/library12_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1580dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library12"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1615dp"
+                    android:text="@string/library12_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1700dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library13_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1720dp"
+                    android:background="@drawable/library13" />
+
+                <Button
+                    android:id="@+id/library13_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1720dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library13"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1755dp"
+                    android:text="@string/library13_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1840dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library14_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1860dp"
+                    android:background="@drawable/library14" />
+
+                <Button
+                    android:id="@+id/library14_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1860dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library14"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="1895dp"
+                    android:text="@string/library14_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="1980dp"
+                    android:background="#808080" />
+
+                <ImageButton
+                    android:id="@+id/library15_ImageBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="2000dp"
+                    android:background="@drawable/library15" />
+
+                <Button
+                    android:id="@+id/library15_Btn"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="2000dp"
+                    android:background="#00ff0000"
+                    android:gravity="top"
+                    android:textColor="#000000"
+                    android:text="@string/library15"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="2035dp"
+                    android:text="@string/library15_address"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
